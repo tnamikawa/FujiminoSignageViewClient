@@ -47,9 +47,26 @@ var themes = {
 
 };
 
+var currentDatetime = function() {
+	var now = new Date();
+	var year = now.getFullYear();
+	var month = now.getMonth() + 1;
+	var week = now.getDay();
+	var day = now.getDate();
+	var hour = now.getHours();
+	var min = now.getMinutes();
+
+	var weekdays = new Array("日", "月", "火", "水", "木", "金", "土");
+
+	return month + "<span style=\"font-size:80%\">/</span>" + day
+			+ "<span style=\"font-size:80%\">（" + weekdays[week] + "）</span> "
+			+ ('0' + hour).substr(-2)
+			+ '<span style=\"font-size:80%\">:</span>' + ('0' + min).substr(-2);
+};
+
 var defaultInput = {
 	theme : 'waiting',
-	message : 'ほげほげさんがコミットしました。<br />テストは<span style="color:red">失敗</span>しました。'
+	message : currentDatetime()
 };
 
 var serverUrl = 'http://eyeball.herokuapp.com/index.php';
@@ -66,6 +83,3 @@ var checkServer = function() {
 
 // 10秒ポーリング、更新があればshowMessage
 setInterval("checkServer()", 10000);
-
-
-
