@@ -27,19 +27,19 @@ var themes = {
 		messageColor : '#000000'
 	},
 	committed : {
-		mp3 : 'machinegun.mp3',
-		bg : 'putin_see.jpg',
+		mp3 : 'bell.mp3',
+		bg : 'putin_angry.jpg',
 		messageY : '80%',
 		messageColor : '#ffffff'
 	},
 	failed : {
-		mp3 : 'failed.mp3',
-		bg : 'putin_failed2.jpg',
+		mp3 : 'machinegun.mp3',
+		bg : 'putin_machinegun.jpg',
 		messageY : '5%',
 		messageColor : '#ffffff'
 	},
 	succeed : {
-		mp3 : 'succeed.mp3',
+		mp3 : 'cheer.mp3',
 		bg : 'putin_succeed.jpg',
 		messageY : '70%',
 		messageColor : '#000000'
